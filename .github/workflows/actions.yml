@@ -37,11 +37,12 @@ jobs:
 
     - name: Test
       run: |
-        dotnet build --configuration Release --verbosity normal src/*.Client.Test/*.csproj
-        dotnet test --no-build --verbosity normal src/*.Client.Test/*.csproj
+        dotnet restore src/*.Client.Test/*.csproj
+        dotnet build --configuration Release --verbosity d --no-restore src/*.Client.Test/*.csproj
+        dotnet test --configuration Release --no-build --verbosity d src/*.Client.Test/*.csproj
 
     - name: Publish
-      run: dotnet pack -c Release src/*.Client/*.csproj
+      run: dotnet pack --configuration Release src/*.Client/*.csproj
 
     # - name: Publish
     #   run: dotnet nuget push .\bin\Release\*.nupkg --source github
