@@ -1,6 +1,5 @@
 .github/workflows/actions.yml
 .gitignore
-.openapi-generator-ignore
 ExampleApi.Client.sln
 README.md
 appveyor.yml
@@ -9,10 +8,7 @@ docs/TodoApi.md
 docs/TodoItem.md
 git_push.sh
 nuget.config
-src/ExampleApi.Client.Test/Api/TodoApiTests.cs
 src/ExampleApi.Client.Test/ExampleApi.Client.Test.csproj
-src/ExampleApi.Client.Test/Model/ProblemDetailsTests.cs
-src/ExampleApi.Client.Test/Model/TodoItemTests.cs
 src/ExampleApi.Client/Api/TodoApi.cs
 src/ExampleApi.Client/Client/ApiClient.cs
 src/ExampleApi.Client/Client/ApiException.cs
